@@ -1,0 +1,31 @@
+Design challenge:
+Support iteration over stack items by client, without revealing the internal representation of the stack
+
+Java solution -> Iterable interface
+public interface Iterable<Item> {
+    Iterator<Item> iterator();
+}
+
+Iterable -> Has a method that returns an Iterator
+public interface Iterator<Item> {
+    boolean hasNext();
+    Item next();
+    void remove(); -> optional; by your own risk
+}
+
+
+Iterator -> Has methods hasNext() and next()
+
+Why make data structure Iterable?
+Java supports "foreach" statement (shorthand)
+
+    for (String s : stack)
+        StdOut.println(s);
+
+Equivalent code
+
+    Iterator<String> i = stack.iterator();
+    while(i.hasNext()) {
+        String s = i.next();
+        StdOut.println(s);
+    }
