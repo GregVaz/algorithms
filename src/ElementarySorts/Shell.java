@@ -12,7 +12,7 @@ Which increment sequence to use?
 
 import edu.princeton.cs.algs4.StdOut;
 
-public class ShellSort {
+public class Shell {
 
     public static void sort(Comparable[] a) {
         int N = a.length;

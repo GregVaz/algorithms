@@ -2,7 +2,7 @@ package ElementarySorts;
 
 import edu.princeton.cs.algs4.StdOut;
 
-public class InsertionSort {
+public class Insertion {
 
     public static void sort(Comparable[] a) {
         int N = a.length;

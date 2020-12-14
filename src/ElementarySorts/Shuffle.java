@@ -14,7 +14,7 @@ Shuffle sort
 
 import edu.princeton.cs.algs4.StdRandom;
 
-public class ShuffleSort {
+public class Shuffle {
 
     public static void shuffle(Comparable[] a) {
         int N = a.length;

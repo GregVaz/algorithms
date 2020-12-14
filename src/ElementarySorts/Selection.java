@@ -11,7 +11,7 @@ import edu.princeton.cs.algs4.StdRandom;
 
 import java.io.File;
 
-public class SelectionSort {
+public class Selection {
 
     public static void sort(Comparable[] a) {
         int N = a.length;
