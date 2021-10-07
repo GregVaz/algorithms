@@ -8,8 +8,9 @@
 
 5. Here’s a brilliant little linked list puzzle for you. Let’s say you have access to a node from somewhere in the middle of a classic linked list, but not the linked list itself. That is, you have a variable that points to an instance of Node, but you don’t have access to the LinkedList instance. In this situation, if you follow this node’s link, you can find all the items from this middle node until the end, but you have no way to find the nodes that precede this node in the list. “Write code that will effectively delete this node from the list. The entire remaining list should remain complete, with only this node removed.”
 
-1.r = 
-```
+> 1.r =
+
+```ruby
 def print
   current_node = first_node
   begin
@@ -19,9 +20,9 @@ def print
 end
 ```
 
+> 2.r =
 
-2.r = 
-```
+```ruby
 def print_reverse
   current_node = last_node
   begin
@@ -31,8 +32,9 @@ def print_reverse
 end
 ```
 
-3.r = 
-```
+> 3.r =
+
+```ruby
 def last_item
   last_node = first_node
   begin
@@ -42,8 +44,9 @@ def last_item
 end
 ```
 
-4.r = 
-```
+> 4.r =
+
+```ruby
 def reverse_list_array
   array = []
   current_node = first_node
@@ -54,7 +57,7 @@ def reverse_list_array
 
   self.first_node = array.pop
   current_node = first_node
-  while unless array.empty? 
+  while unless array.empty?
     current_node.next_node = array.pop
     current_node = current_node.next_node
   end
@@ -79,7 +82,7 @@ def reverse_list_index
   end
 end
 
-#reverse_book_implementation Awesome!!!!
+# reverse_book_implementation Awesome!!!!
 # All you have to think it is in the properties and advantages of the Nodes.
 def reverse!
   previous_node = nil
@@ -96,8 +99,9 @@ def reverse!
 end
 ```
 
-5.r = 
-```
+> 5.r =
+
+```ruby
 current_node = node_instance
 while current_node do
   current_node.data = current_node.next_node.data
@@ -107,7 +111,7 @@ while current_node do
   end
 end
 
-Book solution
+# Book solution
 def delete_middle_node(node)
   node.data = node.next_node.data
   node.next_node = node.next_node.next_node

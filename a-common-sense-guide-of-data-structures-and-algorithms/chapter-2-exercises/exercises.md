@@ -4,6 +4,8 @@
 
 3. What is the maximum number of steps it would take to perform a binary searcg on an array of size 100,000?
 
-1.r = 4 steps
-2.r = 1 steps
-3.r = 17 steps = 2^17 ~ 130,000
+> 1.r = 4 steps
+
+> 2.r = 1 steps
+
+> 3.r = 17 steps = 2^17 ~ 130,000

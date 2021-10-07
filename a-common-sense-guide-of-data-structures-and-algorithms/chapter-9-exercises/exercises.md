@@ -6,10 +6,14 @@
 
 4. Write a function that uses a stack to reverse a string. (For a example, "abcde" would become "edcba").
 
-1.r = Queue 
-2.r = 6 and 5
-3.r = 1 and 2
-4.r = 
+> 1.r = Queue
+
+> 2.r = 6 and 5
+
+> 3.r = 1 and 2
+
+> 4.r =
+
 ```
 def reverseString(string)
   stack = Stack.new
@@ -22,7 +26,7 @@ def reverseString(string)
   while stack.read do
     reversed_string += stack.pop
   end
-  
+
   reversed_string
 end
 ```

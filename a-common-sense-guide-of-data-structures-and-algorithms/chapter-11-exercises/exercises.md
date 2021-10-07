@@ -12,14 +12,18 @@ For example, here’s what the grid looks like with three rows and seven columns
 
 By “shortest” path, I mean that at every step, you’re moving either one step to the right:
 
-|S| | | | | | |
-|!| | | | | | |
-| | | | | | |F|
+|     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- |
+| S   | .   | .   | .   | .   | .   | .   |
+| !   | .   | .   | .   | .   | .   | .   |
+| .   | .   | .   | .   | .   | .   | F   |
 
 or one step downward:
 
-|S|->| | | | | |
-| |  | | | | | |
-| |  | | | | |F|
+|     |     |     |     |     |     |     |
+| --- | --- | --- | --- | --- | --- | --- |
+| S   | ->  | .   | .   | .   | .   | .   |
+| .   | .   | .   | .   | .   | .   | .   |
+| .   | .   | .   | .   | .   | .   | F   |
 
 Again, your function should calculate the number of shortest paths.
