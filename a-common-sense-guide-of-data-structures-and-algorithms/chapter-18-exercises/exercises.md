@@ -19,3 +19,56 @@ If we want to know how Idris is to connected Lina, we’d see that she’s conne
 Write a function that accepts two vertices from a graph and returns the shortest path between them. The function should return an array containing the precise path, such as ["Idris", "Kamil", "Lina"].
 
 Hint: The algorithm may contain elements of both breadth-first search and Dijkstra’s algorithm.
+
+> 1.r =
+
+The main products to recommend to the user could be those that are directly connected -> ["nail polish", "pins", "needles", "hammer"]
+
+> 2.r =
+
+The result if we perform a depth-first search is:
+-> A, B, E, J, O, F, C, G, K, D, H, L, M, I, N, P
+
+> 3.r =
+
+The result if we perform a breadth-first search is:
+-> A, B, C, D, E, F, J, O, G, K, H, I, L, M, N, P
+
+> 4.r =
+
+```ruby
+
+def bfs(starting_vertex, search_value)
+  return starting_vertex if starting_vertex.value == search_value
+  queue = Queue.new
+
+  visited_vertices = {}
+  visited_vertices[starting_vertex.value] = true
+  queue.enqueue(starting_vertex)
+
+  # While the queue is not empty:
+  while queue.read
+    # Remove the first vertex off the queue and make it the current vertex
+    current_vertex = queue.dequeue
+
+    # Iterate over current vertex's adjacent vertices
+    current_vertex.adjacent_vertices.each do |adjacent_vertex|
+      return adjacent_vertex if adjacent_vertex.value == search_value
+
+      # if we have not yet visited yhe adjacent_vertex
+      if !visited_vertices[adjacent_vertex.value]
+
+        # Mark the adjacent vertex as visited:
+        visited_vertices[adjacent_vertex.value] = true
+
+        # Add the adjacent vertex to the queue
+        queue.enqueue(adjacent_vertex)
+      end
+    end
+
+    return nil
+  end
+end
+```
+
+> 5.r =

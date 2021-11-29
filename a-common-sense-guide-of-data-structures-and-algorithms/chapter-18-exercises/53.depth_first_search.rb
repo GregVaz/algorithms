@@ -15,3 +15,23 @@ def dfs_traverse(vertex, visited_vertices = {})
     dfs_traverse(adjacent_vertex, visited_vertices)
   end
 end
+
+# Code for Depth first traversal search for a particular vertex
+def dfs(vertex, search_value, visited_vertices = {})
+  return vertex if vertex.value == search_value
+
+  visited_vertices[vertex.value] = true
+
+  # Iterate through the current vertex's adjacent vertices:
+  vertex.adjacent_vertices.each do [adjacent_vertex]
+    next if visited_vertices[adjacent_vertex.value]
+
+    return adjacent_vertex if adjacent_vertex.value == search_value
+
+    vertex_were_searching_for = dfs(adjacent_vertex, search_value, visited_vertices)
+
+    return vertex_were_searching_for if vertex_were_searching_for
+  end
+
+  return nil
+end
