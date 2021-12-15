@@ -160,3 +160,74 @@ With this approach, we drastically increased the algorithm's speed to O(N). We p
 ## Recognize Patterns
 
 One of the most helpful strategies for both code optimizations and algorihtms development in general is to find patterns within the problem at hand. Often, the discovery of a patter can help you cut through all the complexity of a problem and develop an algorithm that is actually quite simple.
+
+### The Coin Game
+
+Here's a great example. There's a game I call "The coin game" in which two players compete in the following way. They start with a pile of coins, and each player has the choice of removing either one or two coins from the pile. The player who removes the last coin _loses_.
+
+It turns out that this isn't a game of random chance, and with the right strategy, you can force your opponent to take the last coinc and lose the game.
+
+Here's a Ruby implementation wof a recursive approach
+
+```ruby
+def game_winner(number_of_coins, current_player="you")
+  if number_of_coins <= 0
+    return current_player
+  end
+
+  if current_player == "you"
+    next_player = "them"
+  elsif current_player == "them"
+    next_player = "you"
+  end
+
+  if game_winner(number_of_coins - 1, next_player) == current_player ||
+    game_winner(number_of_coins - 2, next_player) == current_player
+    return current_player
+  else
+    return next_player
+  end
+
+end
+```
+
+> You may have noticed that this function makes multiple recursive calls. If alamr bells are going off in your head, that's for good reason. The time complexity of this function is a whopping O(2^N), which can be unbearably slow.
+
+Now, we can improve this by using thememoization technique you learn about in _Dynamic Programming_, which could bring the speed up to O(N). with N being the number of coins in the starting pile. That's a huge improvement.
+
+> Because N is just a single number, I could conceive that we can make an algorithm that takes just O(1) time. Since we don't actyally have to touch N items in an array or anything like that, if someone told me they figured out an algorithm for the coin game that was just O(1), I'd believe them. So. let's strive for O(1).
+
+### Generaring Examples
+
+While each problem has a unique pattern, _generate numerous examples_. This means we should take a whole bunch of example inputs, calculate their respective outputs, and see if we can detect a pattern.
+
+If we map out who wins for coinc piles of size 1 through 10, we get this table
+
+| Number of coins | Winner |
+| --------------- | ------ |
+| 1               | Them   |
+| 2               | You    |
+| 3               | You    |
+| 4               | Them   |
+| 5               | You    |
+| 6               | You    |
+| 7               | Them   |
+| 8               | You    |
+| 9               | You    |
+| 10              | Them   |
+
+The pattern becomes clear when we lay it out this way. Basically, starting with 1 coin, every third number gives victory to the opponent. Otherwise, you are the winner.
+
+So, if we take the number of coins and substract 1, each "them" ends up at a number that is divisible by 3. At this point, then, we can determine who will win based on a single division calculation:
+
+```ruby
+def game_winner(number_of_coins)
+  if (number_of_coins - 1 ) % 3 == 0
+    return "them"
+  else
+    return "you"
+  end
+end
+```
+
+## Greedy Algorithms
