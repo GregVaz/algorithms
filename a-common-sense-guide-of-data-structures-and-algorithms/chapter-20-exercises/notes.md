@@ -231,3 +231,38 @@ end
 ```
 
 ## Greedy Algorithms
+
+A greedy algorithm is one that, in each step, chooses what appears to be the best option _at that moment in time_.
+
+### Array max
+
+Let's write an algorithm that finds the greatest number in an array.
+
+- One way we can do this is to nested loops and check each umber against every other number in the array. When we find the number that is greater than every other number, it means we've found the greatests number in the array.
+- Another approach would be to sort the array in ascending order and return the final value from the array. If we use a fast sorting algorithm like Quicksort, this would take O(N log N) time.
+
+There's a third option, which is a _greedy algorithm_.
+
+```ruby
+def max(array)
+  greatests_number = array[0]
+
+  array.each do |number|
+    if number > greatests_number
+      greatests_number = number
+    end
+  end
+end
+```
+
+The first line of our function assumes the first number in the array is the _greatests_number_. Now, this is a "greedy" assymption. That is, we're declaring the first number to be the _greatest_number_ because it's the greatests number we've encountered so far. Next. we iterate over all the numbers in the array. As we find any number that is greater than the _greatests_number_, we make this new number the _greatests_number_.
+
+This algorithm takes just O(N) time, as we touch each number in the array just once.
+
+## Change the Data Structure
+
+Another helpful optimization technique is to imagine what would happen if we stored our fiven data in an alternative data structure.
+
+For example, we may be working on a problem where the data is fiben to us in the form of an array. However, reimagining that same data stored as a hash table, tree or other data structure can sometimes reveal a clever optimization oppportunities.
+
+our using of a hash table for the magical lookup technique earlier is a specific example of this.
