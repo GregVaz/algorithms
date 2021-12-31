@@ -336,3 +336,5 @@ Dijkstra's algorithm is a general description of the approach for finding the sh
 In out code implementation, we used a simple arrau for the unvisited_cities data structure, but I noted that a priority queue could be used instead.
 
 When we used a simple array for keeping track of the cities we haven't visited yet (unvisited_cities), our algorithm can take up to O(V^2) steps. This is because the worst-case scenario for Dijkstra's algorithm is when each vertex has an edge leading to every other vertex within the graph. In this case, for every vertex we visit, we check the weight of the path from that vertex to every other vertex. This V vertices multiplied by V vertices, which is O(V^2).
+
+> Notes from the book [A Common-Sense Guide to Data Structures and Algorithms, Second Edition]

@@ -142,3 +142,5 @@ We can even choose to ignore the details of how the calculations actually works.
 1. Imagine that the function you're writing has already been implemented by someone else
 2. Identify the subproblem of the problem
 3. See what happens when you call the function on the subproblem and go from there
+
+> Notes from the book [A Common-Sense Guide to Data Structures and Algorithms, Second Edition]

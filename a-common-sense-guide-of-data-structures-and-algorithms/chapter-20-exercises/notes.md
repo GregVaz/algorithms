@@ -266,3 +266,5 @@ Another helpful optimization technique is to imagine what would happen if we sto
 For example, we may be working on a problem where the data is fiben to us in the form of an array. However, reimagining that same data stored as a hash table, tree or other data structure can sometimes reveal a clever optimization oppportunities.
 
 our using of a hash table for the magical lookup technique earlier is a specific example of this.
+
+> Notes from the book [A Common-Sense Guide to Data Structures and Algorithms, Second Edition]

@@ -141,3 +141,5 @@ Our deletion algorithm has to follow these rules:
 ### The efficiency of Binary Search Tree Deletion
 
 Like search and insertion, deleting from trees is also tipicallu O(log N). This is because deletion requires a search plus a few extra sptes t deal with any hanging children.
+
+> Notes from the book [A Common-Sense Guide to Data Structures and Algorithms, Second Edition]

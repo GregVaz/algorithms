@@ -161,3 +161,5 @@ Now, the primary function of the priority queue is to allow us immediate acess t
 
 It's for this reason that a heap is a natural fit for priority queue implementations. The heap fives us immediate access to the _highest-priority item_, which can always be found at the root node.
 Each time we take care of the highest-priority item, the _next-highest_ item floats to the top of the heap and is on dech to be addressed next.
+
+> Notes from the book [A Common-Sense Guide to Data Structures and Algorithms, Second Edition]

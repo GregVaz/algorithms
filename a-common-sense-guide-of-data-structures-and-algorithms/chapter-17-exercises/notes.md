@@ -132,3 +132,5 @@ In out current trie implementation, every time we've set a "\*" key, we've made 
 To keep thigs simple, let's work with a simple range of 1 to 10, with 1 being the rarest kind of word, and 10 being the extremely popular word.
 
 Excerpt From: Jay Wengrow. “A Common-Sense Guide to Data Structures and Algorithms, Second Edition, 2nd Edition. Chapter-17 It doen's hurt to Trie”
+
+> Notes from the book [A Common-Sense Guide to Data Structures and Algorithms, Second Edition]

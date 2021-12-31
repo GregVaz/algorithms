@@ -71,3 +71,5 @@ We look at Queues, you'll recall that they are lists of items in which data can 
 While Arrays are O(1) for insertions at the end, they're O(N) for deleting from the beginning.
 A doubly linked list, on the other hand, is O(1) for both inserting at the end and for deleting from the beginning.
 That's what makes it a perfect fit for serving as the queue's underlying data structure.
+
+> Notes from the book [A Common-Sense Guide to Data Structures and Algorithms, Second Edition]

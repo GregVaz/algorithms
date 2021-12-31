@@ -60,3 +60,5 @@ Quicselect relies on partitioning and can be thought of as a hybrid of Quicksort
 
 Plenty of algorithms employ sorting as part of a larger process. We now know that any time we do so, we have an algorithm that is at least O( N log N).
 Of course, the algorithm may be slower that this if it has other things going on, but we know that O(N log N) will always be the _base line_
+
+> Notes from the book [A Common-Sense Guide to Data Structures and Algorithms, Second Edition]
